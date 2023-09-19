@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 /**
  * Creacion de los assets que se utilizaran en la aplicacion
@@ -115,6 +115,8 @@ const App = () => {
 /**
  * Se renderiza la aplicacion en el elemento con id root
  */
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
