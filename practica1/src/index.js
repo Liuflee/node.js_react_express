@@ -12,6 +12,18 @@ const assets = {
   audioSad: require('./audio/sadsong.mp3'),
 };
 
+const empanadaStyle = {
+  margin: '0 auto',
+  display: 'block',
+  padding: '20px'
+};
+
+const buttonStyle = {
+  fontSize: '20px',
+  padding: '10px 20px',
+  display: 'block',
+  margin: '0 auto'
+};
 
 const App = () => {
   const [counter, setCounter] = useState(0);
@@ -81,25 +93,25 @@ const App = () => {
       {isSad ? (
         <>
           <h1>BAD ENDING: No comí empanada, moriré de hambre</h1>
-          <img src={assets.sadGIF} alt="Empanada" style={{ margin: '0 auto', display: 'block', padding: '20px' }} />
+          <img src={assets.sadGIF} alt="Empanada" style={empanadaStyle} />
         </>
       ) : isHappy ? (
 
         <>
           <h1>Empanada comida, estoy feliz</h1>
-          <img src={assets.happyGIF} alt="Empanada" style={{ margin: '0 auto', display: 'block', padding: '20px' }} />
+          <img src={assets.happyGIF} alt="Empanada" style={empanadaStyle} />
         </>
 
       ) : showImage ? (
 
         <>
           <h1>Ya pasaron más de 10 segundos, necesito comer una empanada</h1>
-          <img src={assets.empanaImage} alt="Empanada" style={{ margin: '0 auto', display: 'block', padding: '20px' }} />
-          <button onClick={handleHappyClick} style={{ fontSize: '20px', padding: '10px 20px', display: 'block', margin: '0 auto' }}>
+          <img src={assets.empanaImage} alt="Empanada" style={empanadaStyle} />
+          <button onClick={handleHappyClick} style={buttonStyle}>
             Comer empanada
           </button>
           {showButton && (
-            <button onClick={handleSadClick} style={{ fontSize: '20px', padding: '10px 20px', display: 'block', margin: '0 auto' }}>
+            <button onClick={handleSadClick} style={buttonStyle}>
               No dar empanada
             </button>
           )}
