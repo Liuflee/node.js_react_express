@@ -1,43 +1,43 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
+import SearchBar from './SearchBar';
 
-const Title = ({ course }) => <h1>{course}</h1>
-
-const Content = (props) => {
-  return (
-    <p>
-      {props.part} {props.exercises}
-    </p>
-  );
-}
-
-const Total = ({ exercises }) => <p>Number of exercises {exercises}</p>
+const API_KEY = 'b5b4abe3ce694e1aade4e5cf20cb7118';
 
 const App = () => {
-  const course = 'Half Stack application development'
-  const part1 = 'Fundamentals of React'
-  const exercises1 = 10
-  const part2 = 'Using props to pass data'
-  const exercises2 = 7
-  const part3 = 'State of a component'
-  const exercises3 = 14
+  const [newsData, setNewsData] = useState([]);
+  
+  const callAPI = (search) => {
+    fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`)
+      .then(response => response.json())
+      .then(data => setNewsData(data.articles))
+      .catch(error => console.error(error));
+  };
+
+  useEffect(() => {
+    // Realizar una búsqueda inicial (por ejemplo, noticias populares al cargar la página)
+    callAPI('technology');
+  }, []); // El segundo argumento [] indica que esto se ejecutará solo al montar el componente
 
   return (
     <div>
-      <Title course={course} />
-      <p>
-        <Content part = {part1} exercises = {exercises1} />
-      </p>
-      <p>
-        <Content part = {part2} exercises = {exercises2} />
-      </p>
-      <p>
-        <Content part = {part3} exercises = {exercises3} />
-      </p>
-      <p> <Total exercises = {exercises1 + exercises2 + exercises3} /></p>
+      <h1>Aplicación de Búsqueda de Noticias</h1>
+      <SearchBar onSearch={callAPI} />
+      <div>
+        <h2>Noticias</h2>
+        <ul>
+          {newsData.map((article, index) => (
+            <li key={index}>
+              <h3>{article.title}</h3>
+              <p>{article.description}</p>
+              <a href={article.url} target="_blank" rel="noopener noreferrer">Leer más</a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
+  );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<App />)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
