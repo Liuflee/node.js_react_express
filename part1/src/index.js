@@ -18,6 +18,7 @@ const App = () => {
    * Se utiliza un useEffect para que se llame a la API cuando se monta el componente
    * para que de esta manera no esté vacio 
   */
+  
   useEffect(() => {
     callAPI('videojuegos');
   }, []); // [] Solo se ejecuta cuando se monta el componente 
@@ -44,3 +45,4 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
+
