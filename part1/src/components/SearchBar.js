@@ -1,30 +1,34 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
+const SearchBar = ({onSearch}) => {
+	const [searchTerm, setSearchTerm] = useState("");
 
-const SearchBar = ({ onSearch }) => {
+	const handleInputChange = (event) => {
+		setSearchTerm(event.target.value);
+	};
 
-  const [searchTerm, setSearchTerm] = useState('');
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		onSearch(searchTerm);
+	};
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+	return (
+		<form className='input' onSubmit={handleSubmit}> {/* Se crea un input */}
+			<input
+				type="text"
+				placeholder="Buscar..."
+				value={searchTerm}
+				onChange={handleInputChange}
+			/>
+			<button className='raised-button' type="submit">Buscar</button>
+		</form>
+	);
+};
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    onSearch(searchTerm);
-  };
+SearchBar.propTypes = {
+	onSearch: PropTypes.func.isRequired, // Espera que 'onSearch' sea una función y es requerida
+};
 
-  return (
-    <form className='input' onSubmit={handleSubmit}> {/* Se crea un input */}
-      <input
-        type="text"
-        placeholder="Buscar..."
-        value={searchTerm}
-        onChange={handleInputChange}
-      /> 
-      <button className='raised-button' type="submit">Buscar</button>
-    </form>
-  );
-}
 
 export default SearchBar;
