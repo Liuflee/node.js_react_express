@@ -1,0 +1,111 @@
+/* Estilo base para el input */
+input {
+  padding: 10px; /* Espaciado interno */
+  border: 2px solid #ccc; /* Borde con color de fondo gris claro */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el borde y la sombra */
+  font-size: 16px; /* Tamaño de fuente */
+}
+
+/* Cambio de estilo al enfocar el input */
+input:focus {
+  border-color: #007bff; /* Cambia el color del borde al enfocar el input */
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Aumenta la sombra al enfocar el input */
+  outline: none; /* Elimina el resaltado predeterminado del enfoque */
+}
+
+/* Estilo para el contenedor del formulario */
+.input {
+  display: flex; /* Utiliza flexbox para alinear elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+}
+
+/* Estilos para el botón */
+.raised-button {
+  padding: 13px 15px; /* Aumenta el espacio horizontal para el botón */
+  background-color: #007bff; /* Cambia el color de fondo del botón */
+  color: #fff; /* Cambia el color del texto del botón a blanco */
+  border: none; /* Elimina el borde del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 10px; /* Agrega un margen a la izquierda para separar el botón del input */
+}
+
+/* Cambio de estilo al pasar el mouse sobre el botón */
+.raised-button:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenedor principal */
+.app-container {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center; /* Centra el contenido en el contenedor principal */
+}
+
+/* Estilos para el título de la aplicación */
+.app-title {
+  font-size: 32px; /* Aumenta el tamaño del título */
+  color: #007bff; /* Cambia el color del título a azul */
+  margin-bottom: 20px; /* Agrega espacio inferior */
+  font-weight: bold; /* Hace que el título sea más audaz */
+  letter-spacing: 1px; /* Añade espacio entre letras */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para el contenedor de noticias */
+.news-container {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left; /* Alinea el contenido a la izquierda */
+}
+
+/* Estilos para el título de noticias */
+.news-title {
+  font-size: 20px; /* Tamaño de fuente del título de noticias */
+  margin-bottom: 10px; /* Espaciado inferior del título de noticias */
+  color: #007bff; /* Color del texto del título de noticias */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border: #333; /* Borde del título de noticias (debería ser 'border: 1px solid #333;' para funcionar) */
+}
+
+/* Estilos para cada noticia */
+.news-item {
+  margin-bottom: 20px; /* Espaciado inferior entre cada noticia */
+  padding-bottom: 20px; /* Espaciado adicional en la parte inferior de cada noticia */
+  border-bottom: 1px solid #ccc; /* Línea divisoria entre noticias */
+}
+
+/* Estilos para el título de cada artículo */
+.news-article-title {
+  font-size: 18px; /* Tamaño de fuente del título de artículo */
+  color: #333; /* Color del texto del título de artículo */
+}
+
+/* Estilos para la descripción de cada artículo */
+.news-article-description {
+  font-size: 16px; /* Tamaño de fuente de la descripción del artículo */
+  color: #666; /* Color del texto de la descripción del artículo */
+}
+
+/* Estilos para el enlace "Leer más" */
+.news-article-link {
+  font-size: 16px; /* Tamaño de fuente del enlace "Leer más" */
+  color: #007bff; /* Color del texto del enlace "Leer más" */
+  text-decoration: none; /* Elimina la decoración de texto (subrayado) del enlace */
+  display: inline-block; /* Hace que el enlace sea un bloque en línea */
+  margin-top: 10px; /* Espaciado superior del enlace "Leer más" */
+}
+
+/* Cambio de estilo al pasar el mouse sobre el enlace "Leer más" */
+.news-article-link:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse sobre él */
+}

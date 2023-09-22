@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const SearchBar = ({ onSearch }) => {
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,14 +15,14 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}> {/* Se crea un input */}
+    <form className='input' onSubmit={handleSubmit}> {/* Se crea un input */}
       <input
         type="text"
         placeholder="Buscar..."
         value={searchTerm}
         onChange={handleInputChange}
       /> 
-      <button type="submit">Buscar</button>
+      <button className='raised-button' type="submit">Buscar</button>
     </form>
   );
 }
