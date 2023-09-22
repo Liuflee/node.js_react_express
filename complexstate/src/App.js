@@ -1,15 +1,16 @@
 import React, {useState} from 'react';
-import History from './History';
+import History from './components/History';
+import Button from './components/Button';
 
 /**
  * En React está prohibido mutar el estado directamente, por lo que se debe hacer algo como esto:
  * 
  */
 const App = () => {
-    
-    const [left, setLeft] = useState(0)
-    const [right, setRight] = useState(0)
-    const [allClicks, setAll] = useState([])
+
+  const [left, setLeft] = useState(0) // Los hooks no pueden estar dentro de condicionales, bucles o funciones
+  const [right, setRight] = useState(0)
+  const [allClicks, setAll] = useState([])
   
   
     const handleLeftClick = () => {
@@ -24,14 +25,14 @@ const App = () => {
     }
 
     return (
-        <div>
-          {left}
-          <button onClick={handleLeftClick}>left</button>
-          <button onClick={handleRightClick}>right</button>
-          {right}
-          <History allClicks={allClicks} />
-        </div>
-      )
+      <div>
+        {left}
+        <Button onClick={handleLeftClick} text='left' />
+        <Button onClick={handleRightClick} text='right' />
+        {right}
+        <History allClicks={allClicks} />
+      </div>
+    );
   }
 
   export default App;
