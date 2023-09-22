@@ -1,0 +1,18 @@
+    /* Estilos CSS para los botones */
+    .raised-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .raised-button:hover {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    

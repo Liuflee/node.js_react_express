@@ -1,0 +1,16 @@
+/* En tu archivo de estilos CSS */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px; /* Separación entre botones */
+  }
+
+  /* Estilos CSS para el contenedor de historial */
+.history-container {
+    margin-top: 20px; /* Espacio superior para separar del contenido superior */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    text-align: center;
+  }
+  
