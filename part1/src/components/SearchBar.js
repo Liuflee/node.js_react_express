@@ -14,7 +14,7 @@ const SearchBar = ({onSearch}) => {
 	};
 
 	return (
-		<form className='input' onSubmit={handleSubmit}> {/* Se crea un input */}
+		<form className='formulario-container' onSubmit={handleSubmit}> {/* Se crea un input */}
 			<input
 				type="text"
 				placeholder="Buscar..."

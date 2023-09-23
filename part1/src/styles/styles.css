@@ -2,10 +2,12 @@
 input {
   padding: 10px; /* Espaciado interno */
   border: 2px solid #ccc; /* Borde con color de fondo gris claro */
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el borde y la sombra */
   font-size: 16px; /* Tamaño de fuente */
+  width: 100%; /* Ancho del input al 100% del contenedor */
+  margin-left: 20px;
 }
 
 /* Cambio de estilo al enfocar el input */
@@ -16,7 +18,7 @@ input:focus {
 }
 
 /* Estilo para el contenedor del formulario */
-.input {
+.formulario-container {
   display: flex; /* Utiliza flexbox para alinear elementos horizontalmente */
   align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
 }
@@ -27,7 +29,7 @@ input:focus {
   background-color: #007bff; /* Cambia el color de fondo del botón */
   color: #fff; /* Cambia el color del texto del botón a blanco */
   border: none; /* Elimina el borde del botón */
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -37,35 +39,43 @@ input:focus {
 
 /* Cambio de estilo al pasar el mouse sobre el botón */
 .raised-button:hover {
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  transform: scale(1.02); /* Escala el botón al 105% del tamaño original */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Agrega una sombra al botón */
 }
 
 /* Estilos para el contenedor principal */
 .app-container {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #fff;
   padding: 20px;
   text-align: center; /* Centra el contenido en el contenedor principal */
 }
 
-/* Estilos para el título de la aplicación */
+/* Estilos para el encabezado */
+.header {
+  display: flex;
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-bottom: 20px; /* Agrega espacio inferior al encabezado */
+  max-width: fit-content;
+}
+
+/* Estilo para el título */
 .app-title {
-  font-size: 32px; /* Aumenta el tamaño del título */
-  color: #007bff; /* Cambia el color del título a azul */
-  margin-bottom: 20px; /* Agrega espacio inferior */
-  font-weight: bold; /* Hace que el título sea más audaz */
-  letter-spacing: 1px; /* Añade espacio entre letras */
-  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 32px;
+  color: #007bff;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 /* Estilos para el contenedor de noticias */
 .news-container {
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-top: 20px;
   text-align: left; /* Alinea el contenido a la izquierda */
+  margin-right: 200px;
+  border-top: 1px solid #ccc; /* Línea divisoria en la parte superior del contenedor de noticias */
 }
 
 /* Estilos para el título de noticias */
