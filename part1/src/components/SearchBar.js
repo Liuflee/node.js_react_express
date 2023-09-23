@@ -15,7 +15,7 @@ const SearchBar = ({onSearch}) => {
 
 	return (
 		<form className='formulario-container' onSubmit={handleSubmit}> {/* Se crea un input */}
-			<input
+			<input className = 'custom-input'
 				type="text"
 				placeholder="Buscar..."
 				value={searchTerm}

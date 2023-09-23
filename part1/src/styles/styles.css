@@ -1,17 +1,19 @@
 /* Estilo base para el input */
-input {
-  padding: 10px; /* Espaciado interno */
-  border: 2px solid #ccc; /* Borde con color de fondo gris claro */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves para el borde y la sombra */
-  font-size: 16px; /* Tamaño de fuente */
-  width: 100%; /* Ancho del input al 100% del contenedor */
+/* Estilo para el input personalizado */
+.custom-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 16px;
+  width: 700px;
+  height: 20px;
   margin-left: 20px;
 }
 
 /* Cambio de estilo al enfocar el input */
-input:focus {
+.custom-input:focus {
   border-color: #007bff; /* Cambia el color del borde al enfocar el input */
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Aumenta la sombra al enfocar el input */
   outline: none; /* Elimina el resaltado predeterminado del enfoque */
@@ -21,6 +23,7 @@ input:focus {
 .formulario-container {
   display: flex; /* Utiliza flexbox para alinear elementos horizontalmente */
   align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  
 }
 
 /* Estilos para el botón */
@@ -54,15 +57,14 @@ input:focus {
 
 /* Estilos para el encabezado */
 .header {
-  display: flex;
+  display: flex; /* Utiliza flexbox para alinear elementos horizontalmente */
   align-items: center; /* Centra verticalmente los elementos */
   margin-bottom: 20px; /* Agrega espacio inferior al encabezado */
-  max-width: fit-content;
 }
 
 /* Estilo para el título */
 .app-title {
-  font-size: 32px;
+  font-size: 40px;
   color: #007bff;
   font-weight: bold;
   letter-spacing: 1px;

@@ -23,10 +23,10 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <div className="header">
+      <header className="header">
         <h1 className="app-title">GPTSearch</h1>
         <SearchBar onSearch={callAPI} />
-      </div>
+      </header>
       <div className="news-container">
         <h2 className="news-title">Noticias</h2>
         <ul className="news-list">
